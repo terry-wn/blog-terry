@@ -1,0 +1,51 @@
+{
+  "cSpell.words": [
+    "antfu",
+    "chengyu",
+    "demi",
+    "docsearch",
+    "echarts",
+    "evernote",
+    "giscus",
+    "Hanzi",
+    "iconify",
+    "intlify",
+    "lazyload",
+    "mathjax",
+    "pinia",
+    "pnpm",
+    "qrcode",
+    "revealjs",
+    "sandpack",
+    "shiki",
+    "twoslash",
+    "unocss",
+    "unplugin",
+    "Vite",
+    "vitejs",
+    "Vitesse",
+    "vitest",
+    "vnode",
+    "vueuse",
+    "waline",
+    "weakmap",
+    "weibo",
+    "Zhao",
+    "wangnian",
+    "zuci"
+  ],
+  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": "locales",
+  "i18n-ally.sortKeys": true,
+  "prettier.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "files.associations": {
+    "*.css": "postcss"
+  },
+  "editor.formatOnSave": false,
+  "stylelint.validate": ["css", "less", "postcss", "html", "vue"]
+}

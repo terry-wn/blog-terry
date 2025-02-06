@@ -1,0 +1,33 @@
+{
+  "default": true,
+  "line-length": false,
+  "no-inline-html": {
+    "allowed_elements": [
+      "a",
+      "b",
+      "p",
+      "br",
+      "img",
+      "sup",
+      "em",
+      "mark",
+      "Badge",
+      "script",
+      "IconDisplay",
+      "Icon",
+      "div",
+      "iframe",
+      "h3",
+      "AutoCatalog",
+      "Catalog",
+      "Replit",
+      "SiteInfo",
+      "VPCard",
+      "VPIcon",
+      "Hanzi",
+      "Chazi",
+      "FlippyCard",
+      "HanziCard"
+    ]
+  }
+}

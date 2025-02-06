@@ -1,0 +1,166 @@
+@use '@sass-palette/hope-config';
+
+// 使用vuejs.org的彩色文字样式
+.fancy-hero-text {
+  .vp-blog-hero {
+    .vp-blog-hero-title {
+      // background: -webkit-linear-gradient(315deg,#42d392 25%,#647eff);
+      background: -webkit-linear-gradient(315deg, #647eff 25%, #42d392);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .vp-blog-hero-description {
+      background: -webkit-linear-gradient(315deg, #647eff 25%, #42d392);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.theme-container {
+  // 调整下余白
+  .vp-project-home {
+    .vp-hero-info-wrapper {
+      margin-bottom: 15px;
+    }
+  }
+
+  // 调整giscus下余白
+  .vp-page .giscus-wrapper.input-top {
+    padding-bottom: 0;
+  }
+
+  .vp-page .giscus-wrapper.input-top .giscus {
+    margin-bottom: auto;
+  }
+
+  .vp-page:not(.not-found) + .vp-footer-wrapper {
+    margin-top: auto;
+  }
+}
+
+// 调整主体内容最小高度，避免出纵向滚动条
+#main-content {
+  box-sizing: border-box;
+  min-height: calc(100vh - var(--footer-height));
+}
+
+// 下面需求已提交PR，无需再自定义
+// 调整blog-info-wrapper跟navbar的距离
+// .theme-container {
+//   // vuepress-theme-hope/packages/theme/src/client/module/blog/styles/info-panel.scss
+//   .page {
+//     .blog-info-wrapper {
+//       margin-top: 0;
+//       top: calc(var(--navbar-height) + 0.75rem);
+
+//       @media (max-width: hope-config.$pad) {
+//         top: calc(var(--navbar-mobile-height) + 0.75rem);
+//       }
+//     }
+//   }
+// }
+
+.wangnian {
+  &.links {
+    .vp-site-info {
+      width: calc(33% - 24px);
+
+      @media (max-width: hope-config.$pad) {
+        width: calc(50% - 24px);
+
+        .vp-site-info-name {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  // 鼠标放上后变大
+  .vp-site-info {
+    overflow: hidden;
+
+    .vp-site-info-preview {
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      .vp-site-info-preview {
+        transform: scale(1.15);
+      }
+    }
+  }
+}
+
+.page-break-always {
+  break-after: always !important;
+}
+.page-break-avoid {
+  page-break-inside: avoid !important;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* 调整评论框宽度 */
+#vp-comment {
+  max-width: var(--content-width, 740px);
+  margin: 0 auto;
+  padding: 0 2.5rem;
+
+  @media (max-width: hope-config.$mobile) {
+    padding: 0 0.5rem;
+  }
+}
+
+.wide-content {
+  &.theme-container {
+    .vp-breadcrumb,
+    .vp-page-title,
+    .theme-hope-content,
+    .content-after-container,
+    .vp-page-meta,
+    #vp-comment {
+      max-width: 1080px;
+    }
+
+    page: wide;
+  }
+}
+
+/* 针对所有设置了 `page: wide;` 选择器的页面 */
+@page wide {
+  size: landscape;
+}
+
+// playground
+@media (max-width: hope-config.$mobile) {
+  .vp-playground,
+  .vue-playground-wrapper,
+  .vp-md-demo,
+  .sandpack-wrapper {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+    border-radius: 0;
+  }
+
+  .vp-md-demo {
+    .vp-playground,
+    .vue-playground-wrapper,
+    .vp-md-demo,
+    .sandpack-wrapper {
+      margin-left: -1rem;
+      margin-right: -1rem;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
